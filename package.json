@@ -1,6 +1,6 @@
 {
   "name": "serviceapis",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Loading methods for various service APIs (Google Analytics, Facebook, Youtube, ...).",
   "main": "build/index.js",
   "scripts": {

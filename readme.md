@@ -4,7 +4,7 @@ Loader methods for APIs of various services, currently Google Universal Analytic
 
 ![npm downloads total](https://img.shields.io/npm/dt/serviceapis.svg) ![npm version](https://img.shields.io/npm/v/serviceapis.svg) ![npm license](https://img.shields.io/npm/l/serviceapis.svg)
 
-Provides loader methods to safely load the APIs of the following services:
+Provides loader methods for loading the APIs of the following services safely:
 
 * [Google Universal Analytics](https://developers.google.com/analytics/devguides/collection/analyticsjs/)
 * [YouTube](https://developers.google.com/youtube/iframe_api_reference)
@@ -57,7 +57,7 @@ ga('set', 'anonymizeIp', true);
 Use the following call:
 
 ```js
-gaApi.isAvailable() // return true or false
+gaApi.isAvailable() // returns true or false
 ```
 
 ### YouTube
@@ -89,7 +89,7 @@ ytApi.load()
 
 #### Wait for the YouTube API
 
-Wait for the API to become ready, but to not trigger a `load`. It waits forever if `load` does not get triggered.
+Wait for the API to become ready, but not to trigger a `load`. It remains forever if `load` does not get triggered.
 
 ```js
 await ytApi.availability();
@@ -104,19 +104,19 @@ ytApi.availability()
   });
 ```
 
-**Note:** `load` uses `availability` internally. There is no need to call it again, if you just called `load` itself.
+**Note:** `load` uses `availability` internally. There is no need to call it again if you just called `load` itself.
 
 #### Check if YouTube API is available
 
 Use the following call:
 
 ```js
-ytApi.isAvailable() // return true or false
+ytApi.isAvailable() // returns true or false
 ```
 
 #### Create a YouTube player object
 
-Creates a player object and waits till it is ready. Triggers a load of the API automatically in case it is necessary. Therefore, in most cases you can use `createPlayer` without `load`.
+Creates a player object and waits till it is ready. Triggers a load of the API automatically in case it is necessary. Therefore, in most cases, you can use `createPlayer` without `load`.
 
 ```js
 const player = await ytApi.createPlayer(
